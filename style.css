@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #121212;
+    padding: 40px 80px 0;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    margin-block: 2rem 8rem;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+}
+
+.loader div {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #ffd700;
+    animation: wave 2s infinite ease-in-out;
+}
+
+
+@keyframes wave {
+    /* 0%, 100% {
+        height: 20px;
+        background-color: #ffd700;
+    } */
+
+    25% {
+        height: 100px;
+        background-color: #fc00ff;
+    }
+
+    50% {
+        height: 20px;
+        background-color: #9c73f8;
+    }
+
+    /* 100% {
+        height: 20px;
+        background-color: #ffd700;
+    } */
+}
+
+
+/* Since the first child already starts its animation without
+any delay, which is the default behavior, I can safely remove 
+it from my specifications */
+
+/* .loader :nth-child(1) {
+    animation-delay: 0s;
+} */
+
+.loader :nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader :nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loader :nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.loader :nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.loader :nth-child(6) {
+    animation-delay: 1s;
+}
+
