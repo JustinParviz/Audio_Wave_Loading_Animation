@@ -23,17 +23,27 @@ h1 {
 }
 
 .loader {
+    --size: 20px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    height: 100px;
+    /* gap: 10px; */
+    gap: calc(var(--size) / 2);
+    /* height: 100px; */
+    height: calc(var(--size) * 5);
 }
 
 .loader div {
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    /* width: 20px; */
+    width: var(--size);
+
+    /* height: 20px; */
+    height: var(--size);
+
+    /* border-radius: 20px; */
+    border-radius: var(--size);
+
     background-color: #ffd700;
     animation: wave 2s infinite ease-in-out;
 }
@@ -46,12 +56,16 @@ h1 {
     } */
 
     25% {
-        height: 100px;
+        /* height: 100px; */
+        height: calc(var(--size) * 5);
+
         background-color: #fc00ff;
     }
 
     50% {
-        height: 20px;
+        /* height: 20px; */
+        height: var(--size);
+
         background-color: #9c73f8;
     }
 
